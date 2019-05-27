@@ -1,0 +1,35 @@
+{
+  "name": "zerobasecloud",
+  "version": "1.0.0",
+  "description": "Zero Base Cloud demo",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spidertong/ZeroBaseCloud.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "eletron"
+  ],
+  "author": "spider.tong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spidertong/ZeroBaseCloud/issues"
+  },
+  "homepage": "https://github.com/spidertong/ZeroBaseCloud#readme",
+  "devDependencies": {
+    "electron": "^5.0.1"
+  },
+  "dependencies": {
+    "botui": "^0.3.8",
+    "child_process": "^1.0.2",
+    "core-js": "^2.6.5",
+    "node-gtts": "^2.0.2",
+    "play-sound": "^1.1.3"
+  }
+}

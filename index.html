@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ZeroBaseCloud - ChatBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui-theme-default.css" />
+    <meta name="description" content="A hello world bot with HTML in content. A conversational UI built using BotUI.">
+
+  </head>
+  <body>
+      <script src="https://cdn.jsdelivr.net/vue/2.0.5/vue.min.js"></script>
+      <script src="https://unpkg.com/botui/build/botui.js"></script>
+
+      <div class="botui-app-container" id="hello-world">
+        <bot-ui></bot-ui>
+      </div>
+      <div>
+        <div id="example-1">
+          <button v-on:click="startSpeechRecognition()" align="middle">
+              <img src="https://img.icons8.com/ios/26/000000/microphone.png">
+          </button>
+        </div>
+      </div>
+
+    <script>const { ipcRenderer } = require('electron')</script>
+    <script src="./hello-world.js"></script>
+    
+  </body>
+</html>
