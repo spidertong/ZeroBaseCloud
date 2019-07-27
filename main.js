@@ -2,11 +2,18 @@ const { app, BrowserWindow } = require('electron')
 const { exec } = require('child_process');
 const { ipcMain } = require('electron')
 
-ipcMain.on('tts', (event, arg) => {
+ipcMain.on('tts', (event, lang, arg) => {
   console.log(arg) 
   //exec('say ' + arg);
   //exec('python3 tts.py " ' + arg + '"')
-  baidu_tts(arg)
+  if(lang == "zh-yue") {
+    console.log('macOS say:')
+    exec('say -v Sin-ji ' + arg);
+  }
+  else{ 
+    console.log('baidu_tts:')
+    baidu_tts(lang, arg) 
+  }
 })
 ipcMain.on('stt-start', (event, arg) => {
   console.log('ipcMain.on stt-start')
@@ -29,11 +36,11 @@ var fs = require('fs');
 var path = require('path');
 
 
-var baidu_tts = function(words){
+var baidu_tts = function(language, words){
   var  postData = querystring.stringify({
-    "lan": "en",//"zh",
+    "lan": language,//"lan": "en",//"zh",
     "ie": "UTF-8",
-    "spd": 4,
+    "spd": 5,
     "text": words//"请问今天晚上下不下雨"
   })
   

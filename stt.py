@@ -17,8 +17,9 @@ class StoText:
             #print("Recognize voice as: " + sText)
             print(sText)
 
-        except sr.UnknownValueError:
+        except sr.UnknownValueError as e:
             sText="-1"
+            print("Could not request results; {0}".format(e))
 
         except sr.RequestError as e:
             sText="-1"
