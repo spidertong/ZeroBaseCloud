@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/spidertong/ZeroBaseCloud#readme",
   "devDependencies": {
-    "electron": "^5.0.1"
+    "electron": "^11.5.0"
   },
   "dependencies": {
     "botui": "^0.3.8",
